@@ -4,7 +4,7 @@ var multer = require('multer');
 require('dotenv').config()
 
 var app = express();
-
+app.use(multer().single("upfile"));
 app.use(cors());
 app.use('/public', express.static(process.cwd() + '/public'));
 
